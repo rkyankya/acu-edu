@@ -14,4 +14,6 @@ test:
   database: <%= ENV['DB_NAME_TEST'] %>
 
 production:
+  <<: *common
+  url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
