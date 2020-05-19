@@ -2,7 +2,7 @@ after 'development:certificates', 'development:users' do
   puts 'Seeding issued_certificates'
 
   certificate = Certificate.first
-  user = User.find_by(email: 'admin@example.com')
+  user = User.find_by(email: 'admin@acu.com')
 
   certificate.issued_certificates.create!(
     user: user,

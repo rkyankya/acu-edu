@@ -4,10 +4,10 @@ after 'development:schools' do
   # Domains for school.
   school = School.first
 
-  %w[school.localhost www.school.localhost].each do |school_domain|
+  %w[acu.localhost www.acu.localhost 127.0.0.1].each do |school_domain|
     school.domains.where(
       fqdn: school_domain,
-      primary: school_domain == 'www.school.localhost'
+      primary: school_domain == 'www.acu.localhost'
     ).first_or_create!
   end
 

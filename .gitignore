@@ -49,3 +49,5 @@ examples.txt
 
 # Ignore logs from lerna
 lerna-debug.log
+
+/config/master.key

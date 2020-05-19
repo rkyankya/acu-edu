@@ -5,7 +5,7 @@ after 'development:courses' do
 
   school = School.first
 
-  admin = User.find_by(email: 'admin@example.com')
+  admin = User.find_by(email: 'admin@acu.com')
 
   admin_coach = Faculty.create!(
     school: school,
@@ -15,7 +15,7 @@ after 'development:courses' do
   )
 
   school.courses.each_with_index do |course, index|
-    user = User.find_by(email: "coach#{index + 1}@example.com")
+    user = User.find_by(email: "coach#{index + 1}@acu.com")
     new_coach = Faculty.create!(school: school, category: 'team', user: user, public: true)
 
     # Add the new coach to the course.
