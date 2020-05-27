@@ -14,8 +14,8 @@ after 'development:schools' do
   end
 
   # Social links
-  school.school_links.where(kind: 'social', url: 'https://www.facebook.com/svdotco').first_or_create!
-  school.school_links.where(kind: 'social', url: 'https://twitter.com/svdotco').first_or_create!
-  school.school_links.where(kind: 'social', url: 'https://www.youtube.com/c/svdotco').first_or_create!
-  school.school_links.where(kind: 'social', url: 'https://www.instagram.com/svdotco').first_or_create!
+  school.school_links.where(kind: 'social', url: 'https://www.facebook.com/').first_or_create!
+  school.school_links.where(kind: 'social', url: 'https://twitter.com/').first_or_create!
+  school.school_links.where(kind: 'social', url: 'https://www.youtube.com/').first_or_create!
+  school.school_links.where(kind: 'social', url: 'https://www.instagram.com/').first_or_create!
 end

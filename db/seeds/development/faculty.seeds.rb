@@ -21,7 +21,7 @@ after 'development:courses' do
     # Add the new coach to the course.
     FacultyCourseEnrollment.create!(safe_to_create: true, faculty: new_coach, course: course)
 
-    # Add admin@example.com as a coach for every course.
+    # Add admin@acu.com as a coach for every course.
     FacultyCourseEnrollment.create!(safe_to_create: true, faculty: admin_coach, course: course)
   end
 end

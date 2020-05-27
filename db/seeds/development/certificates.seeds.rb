@@ -11,9 +11,10 @@ after 'development:courses' do
     margin: 8,
     active: true
   )
-
-  certificate.image.attach(
-    io: File.open(Rails.root.join('spec', 'support', 'uploads', 'certificates', 'sample.png')),
-    filename: 'sample.png'
-  )
+  
+  # No Images at the moment
+  # certificate.image.attach(
+  #   io: File.open(Rails.root.join('spec', 'support', 'uploads', 'certificates', 'sample.png')),
+  #   filename: 'sample.png'
+  # )
 end

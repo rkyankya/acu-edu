@@ -9,7 +9,7 @@ after 'development:levels', 'development:users' do
     Startup.create!(name: admin_user.name, level: course.levels.first)
   end
 
-  (1..3).each do |index|
+  (1..10).each do |index|
     student_user = User.find_by(email: "student#{index}@student.acu.com")
     level = student_user.school.courses.first.levels.first
     Startup.create!(name: student_user.name, level: level)

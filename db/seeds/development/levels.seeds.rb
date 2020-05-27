@@ -9,3 +9,8 @@ after 'development:courses' do
     end
   end
 end
+
+# course = Course.first
+# Level.create!(number: 1, name: 'Begineer', course: course)
+# Level.create!(number: 2, name: 'Mid Point', course: course)
+# Level.create!(number: 3, name: 'Expert', course: course)
