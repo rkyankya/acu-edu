@@ -18,6 +18,6 @@ after 'development:startups' do
 end
 
 # (1..2).each do |index|
-#   coach_user = User.find_by(email: "coach#{inded}@acu.com")
+#   coach_user = User.find_by(email: "coach#{index}@acu.com")
 #   team = Start
 # end
