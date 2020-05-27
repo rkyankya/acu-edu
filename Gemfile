@@ -3,7 +3,7 @@ ruby '2.7.1'
 source 'https://rubygems.org'
 
 # Ruby on Rails. http://rubyonrails.org
-gem 'rails', '~> 6.0.2.2'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
 gem 'dotenv-rails', '~> 2.2', groups: %i[development test]
 
@@ -34,7 +34,7 @@ gem 'bootstrap', '>= 4.3.1' # Official Sass port of Bootstrap.
 gem 'autoprefixer-rails', '~> 9.4' # Autoprefixer for Ruby and Ruby on Rails.
 gem 'bootstrap_form', '~> 4.0' # a Rails form builder that makes it super easy to create beautiful-looking forms using Bootstrap 4
 
-# Custom Gems
+#  Custom Gems
 gem 'hirb'
 gem "anyway_config", "~> 2.0.0"
 gem "better_errors"
@@ -46,7 +46,7 @@ gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
 # Have updated and submitted a PR (https://github.com/ralovets/valid_url/pull/10). Using a personal fork until it's merged.
 gem 'valid_url', '= 0.0.4', github: 'mahesh-krishnakumar/valid_url', branch: 'patch-1' # New url validataion gem
 gem 'roadie-rails', '~> 2.0' # CSS management for e-mails.
-gem 'puma'#, '~> 4.3' # The Puma ruby web server.
+gem 'puma', '~> 4.3' # The Puma ruby web server.
 gem 'slowpoke', '~> 0.3' # Rack::Timeout enhancements for Rails. https://github.com/ankane/slowpoke
 gem 'delayed_job_active_record', '~> 4.1' # Delayed Job for deferring tasks.
 gem 'delayed-web', '~> 0.4' # A rails engine that provides a simple web interface for exposing the Delayed::Job queue.
@@ -59,20 +59,11 @@ gem 'kramdown', '~> 2.1' # kramdown is a fast, pure Ruby Markdown superset conve
 gem 'motion-markdown-it', '~> 8.4.1' # Ruby version of Markdown-it (a CommonMark compliant extensible parser).
 gem 'motion-markdown-it-plugins', '~> 8.4.2' # Plugins for motion-markdown-it.
 gem 'gaffe', '~> 1.2' # Custom error pages. https://github.com/mirego/gaffe
-
-gem 'google_calendar', '= 0.6.4', github: 'northworld/google_calendar' # Thin wrapper over Google Calendar API.
-
-# This is a dependency of google_calendar. Lock the version to 0.4.0 to prevent introduction of sqlite3 into production dependencies.
-gem 'TimezoneParser', '= 0.4.0'
-
 gem 'videojs_rails', '~> 4.12' # Video JS for Rails 3.1+ Asset Pipeline. https://github.com/seanbehan/videojs_rails
 gem 'react-rails', '~> 2.2' # For automatically transforming JSX and using React in Rails.
-
 gem 'ahoy_matey', '~> 2.0' # Analytics for Rails.
 gem 'uuidtools', '~>2.1' # Required by ahoy_matey for ActiveRecord stores.
-
 gem 'acts-as-taggable-on', github: 'spark-solutions/acts-as-taggable-on', branch: 'fix/rails-6-and-failing-specs' # Tag a single model on several contexts. TODO: remove tracking branch when gem is updated for Rails 6 issues
-gem 'sendinblue', '~> 2.4' # This is SendinBlue provided API V2 Ruby GEM
 gem 'email_inquire', '~> 0.6' # Validate email for format, common typos and one-time email providers
 gem 'titleize', '~> 1.4' # better titleizing, modifies Inflector.titleize from default rails
 gem 'addressable', '~> 2.5' # Addressable is a replacement for the URI implementation that is part of Ruby's standard library. https://github.com/sporkmonger/addressable
@@ -81,8 +72,6 @@ gem 'reform-rails', '~> 0.1'
 gem 'virtus', '~> 1.0' # Required for reform coercion. Attributes on Steroids for Plain Old Ruby Objects
 gem 'dry-validation', '~> 0.10' # There seems to be a dependency bug in reform's coercion code - it required dry-types.
 gem 'postmark-rails', '~> 0.19' # Official integration library for using Rails and ActionMailer with the Postmark HTTP API.
-# gem 'intercom-rails', '~> 0.4' # The easiest way to install Intercom in a Rails app.
-gem 'intercom', '~> 3.5' # Ruby bindings for the Intercom API
 gem 'jspdf-rails', '~> 1.0' # HTML5 client-side pdf generation - for certificates
 gem 'responders', '~> 3.0' # A set of Rails responders to dry up your application (respond_to / with)
 gem 'rollbar', '~> 2.14' # Exception tracking and logging from Ruby to Rollbar https://rollbar.com
@@ -101,7 +90,6 @@ gem 'pretender', '~> 0.3.4' # Log in as another user in Rails
 gem 'file_validators', '~> 2.1' # Adds file validators to ActiveModel.
 gem 'pundit', '~> 2.0' # Minimal authorization through OO design and pure Ruby classes.
 gem 'rack-cors', '~> 1.0', require: 'rack/cors' # Rack Middleware for handling CORS, required to serve static assets such as fonts
-gem 'jwt', '~> 2.1' # Ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT), used by Zoom API
 gem 'chartkick', '~> 3.3' # Create beautiful charts with one line of JavaScript.
 gem 'graphql', '~> 1.10' # Ruby implementation of GraphQL http://graphql-ruby.org
 gem 'rodf', '~> 1.1' # ODF generation library for Ruby. https://github.com/westonganger/rodf
@@ -132,7 +120,7 @@ group :development do
   gem 'letter_opener_web', '~> 1.3' # A web interface for browsing Ruby on Rails sent emails.
   gem 'bullet', '~> 6.1' # Detect N+1 queries.
   gem 'web-console', '~> 4.0' # Rails Console on the Browser.
-  gem 'listen', '>= 3.0.5', '< 3.2' # The Listen gem listens to file modifications and notifies you about the changes.
+  gem 'listen', '~> 3.2' # The Listen gem listens to file modifications and notifies you about the changes.
 
   # Go faster, off the Rails - Benchmarks for your whole Rails app
   gem 'derailed_benchmarks', '~> 1.3'
