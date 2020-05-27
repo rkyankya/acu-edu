@@ -1,14 +1,14 @@
 class PupilfirstMailer < ActionMailer::Base # rubocop:disable Rails/ApplicationMailer
   include Roadie::Rails::Mailer
 
-  default from: "Pupilfirst <noreply@pupilfirst.com>"
+  default from: "ACU <noreply@ACU.com>"
 
   layout 'mail/pupil_first'
 
   protected
 
   def default_url_options
-    { host: Rails.env.production? ? 'www.pupilfirst.com' : 'www.pupilfirst.localhost' }
+    { host: Rails.env.production? ? 'www.acu.com' : 'www.acu.localhost' }
   end
 
   def roadie_options
