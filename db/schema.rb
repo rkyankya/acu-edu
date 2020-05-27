@@ -799,7 +799,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_123118) do
     t.string "affiliation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "time_zone", default: "Asia/Kolkata", null: false
+    t.string "time_zone", default: "Africa/Nairobi", null: false
     t.index ["email", "school_id"], name: "index_users_on_email_and_school_id", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["school_id"], name: "index_users_on_school_id"
