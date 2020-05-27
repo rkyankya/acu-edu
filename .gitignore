@@ -7,6 +7,17 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+
+/public/assets
+/public/uploads
 /node_modules
 /yarn-error.log
 
@@ -29,8 +40,10 @@ tags
 # Ignore public packs.
 /public/packs
 /public/assets
-/public/packs-test
 yarn-debug.log*
+/public/packs-test
+/yarn-error.log
+/yarn-debug.log*
 .yarn-integrity
 
 # Ignore these associated with reason-react and bsb
@@ -49,5 +62,4 @@ examples.txt
 
 # Ignore logs from lerna
 lerna-debug.log
-
 /config/master.key

@@ -37,6 +37,7 @@ gem 'bootstrap_form', '~> 4.0' # a Rails form builder that makes it super easy t
 # Custom Gems
 gem 'hirb'
 gem "anyway_config", "~> 2.0.0"
+gem "better_errors"
 gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
 
 # TODO: The zones list in the gem was outdated.

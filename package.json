@@ -51,7 +51,7 @@
     "@graphql-codegen/cli": "^1.11.2",
     "@graphql-codegen/introspection": "^1.11.2",
     "babel-loader": "^8.0.6",
-    "lerna": "^3.22.0",
+    "lerna": "^3.20.2",
     "prettier": "2.0.3",
     "reason-react": ">=0.7.0",
     "sass-loader": "^8.0.2",
