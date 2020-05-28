@@ -5,5 +5,5 @@ class DeviseMailer < Devise::Mailer
   include Roadie::Rails::Automatic
   include Devise::Controllers::UrlHelpers
 
-  default from: 'ACU <noreply@acu.com>'
+  default from: 'ACU <kyankya.raymond@student.utamu.ac.ug>'
 end
