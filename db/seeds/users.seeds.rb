@@ -10,4 +10,5 @@ after 'schools' do
   school.users.where(email: 'coach2@acu.com').create!(name: 'Coach', title: 'Course Coach', password: 'foobar')
   # Production School Domain
   School.first.domains.create!(fqdn: 'acu-edu.herokuapp.com', primary: true)
+  school.users.where(email: 'rkyankya@gmail.com').create!(name: 'Kyankya Raymond', title: 'Developer', password: 'foobar')
 end
